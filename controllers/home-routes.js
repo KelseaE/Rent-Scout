@@ -39,10 +39,10 @@ router.get('/listing/:id', withAuth, async (req, res) => {
           model: House,
           attributes: [
             'id',
-            'title',
-            'home_owner',
+            'address',
             'move_in_date',
             'listing_date',
+            'rent',
             'description',
           ],
         },
