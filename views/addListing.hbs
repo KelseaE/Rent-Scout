@@ -1,0 +1,24 @@
+<!-- views/addListing.hbs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Listing</title>
+</head>
+<body>
+    <h1>Add New Listing</h1>
+    <form action="/api/listings" method="POST">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+        <br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required>
+        <br>
+        <!-- Add more input fields for other listing details (e.g., images) -->
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
