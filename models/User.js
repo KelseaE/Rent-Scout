@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+const listings = require('.Listings');
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -35,7 +36,12 @@ User.init(
         len: [6],
       },
     },
-  },
+    role: {
+      type: DataTypes.ENUM('tenant' , 'landlord'),
+      allowNull: false,
+      defaultValue: 'tenant' ,
+    }
+   },
   {
     hooks: {
       async beforeCreate(newUserData) {
@@ -50,5 +56,14 @@ User.init(
     modelName: 'user',
   }
 );
+
+User.hasMany(RentalListing, {
+  foreignKey: 'userId',
+  onDelete: 'CASCADE',
+});
+
+RentalListing.belongsTo(User, {
+  foreignKey: 'userId',
+});
 
 module.exports = User;

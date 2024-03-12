@@ -18,8 +18,17 @@ Listing.init(
     rent: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id',
+      }
     }
-  },
+  }
+,
   {
     sequelize,
     freezeTableName: true,
