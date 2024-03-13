@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
-const listings = require('.Listings');
+const listings = require('./Listings');
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -57,13 +57,13 @@ User.init(
   }
 );
 
-User.hasMany(RentalListing, {
-  foreignKey: 'userId',
-  onDelete: 'CASCADE',
-});
+// User.hasMany(RentalListing, {
+//   foreignKey: 'userId',
+//   onDelete: 'CASCADE',
+// });
 
-RentalListing.belongsTo(User, {
-  foreignKey: 'userId',
-});
+// RentalListing.belongsTo(User, {
+//   foreignKey: 'userId',
+// });
 
 module.exports = User;
