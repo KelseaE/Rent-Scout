@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>Add New Listing</h1>
+    {{#if user}}
     <form action="/api/listings" method="POST">
         <label for="location">Location:</label>
         <input type="text" id="location" name="location" required>
@@ -20,5 +21,8 @@
         <br>
         <button type="submit">Submit</button>
     </form>
+ {{else}}
+        <p>Please log in to list a property</p>
+    {{/if}}   
 </body>
 </html>
