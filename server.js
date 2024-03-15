@@ -1,3 +1,4 @@
+// Importing all necessary files
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
@@ -24,16 +25,18 @@ app.use(session(sess));
 
 const hbs = exphbs.create({ helpers });
 
+// Configures server to use handlebars as the view engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-
+// Listens to server through port 3001
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
 });
