@@ -34,7 +34,7 @@ House.init(
     house_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'listings',
+        model: 'listing',
         key: 'id',
       },
     },

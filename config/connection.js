@@ -14,13 +14,7 @@ const sequelize = new Sequelize(
       acquire: 30000,
       idle: 10000
     },
-    logging: true, // Enable logging of SQL queries
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false // Only use for development, may expose you to SQL injection
-      }
-    }
+    logging: true
   }
 );
 
