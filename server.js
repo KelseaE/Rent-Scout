@@ -1,3 +1,4 @@
+// Importing all necessary files
 const path = require('path');
 const express = require('express');
 const multer = require('multer');
@@ -21,7 +22,7 @@ const sess = {
         db: sequelize,
     }),
 };
-// Set up Multer for file uploads
+// Set up Multer for image uploads
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, 'public/uploads'); // Set the destination folder for uploaded files
@@ -41,23 +42,23 @@ app.post('/upload', upload.single('image'), (req, res) => {
   // File uploaded successfully, handle further processing here
   res.send('File uploaded successfully');
 });
-
+ HEAD
 const hbs = exphbs.create({helpers})
-//view engine setup
-app.engine('handlebars', hbs.engine)
-app.set('view engine', 'hbs');
 
-//middleware
+// Configures server to use handlebars as the view engine
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.static(path.join(__dirname, 'public')))
 // Render the 'addListing' template when accessing the '/add' route
 app.get('/add', (req, res) => {
-    res.render('addListing');
-});
+    res.render('addListing')
+app.use(routes);
 
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+// Listens to server through port 3001
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => console.log('Now listening'));
+})})
