@@ -4,7 +4,6 @@ const express = require('express');
 const multer = require('multer');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const routes = require('./routes');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
@@ -42,7 +41,6 @@ app.post('/upload', upload.single('image'), (req, res) => {
   // File uploaded successfully, handle further processing here
   res.send('File uploaded successfully');
 });
- HEAD
 const hbs = exphbs.create({helpers})
 
 // Configures server to use handlebars as the view engine
@@ -56,9 +54,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 // Render the 'addListing' template when accessing the '/add' route
 app.get('/add', (req, res) => {
     res.render('addListing')
+})
 app.use(routes);
-
+console.log ("sucees")
 // Listens to server through port 3001
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
-})})
+})
