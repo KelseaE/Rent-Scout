@@ -56,7 +56,7 @@ app.get('/add', (req, res) => {
     res.render('addListing')
 })
 app.use(routes);
-console.log ("sucees")
+console.log ("sucess")
 // Listens to server through port 3001
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));

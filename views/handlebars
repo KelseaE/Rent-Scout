@@ -25,11 +25,26 @@
             {{/each}}
         </div>
     </main>
+    <!-- Side Images Section -->
+<div class="side-images">
+    {{#each images}}
+    <img src="{{this}}" alt="Property Image" data-property-id="{{@index}}">
+    {{/each}}
+  </div>
+  
+  <!-- Detailed Information Section -->
+  <div class="detailed-info">
+    <!-- Detailed information will be displayed here -->
+  </div>
+  
 
     <footer>
         <!-- Footer content -->
     </footer>
 
+    <script src="/path/to/imageDisplay.js"></script>
+    <script src="/path/to/login.js"></script>
+    <script src="/path/to/property.js"></script>
     <script src="scripts.js"></script> 
 </body>
 </html>
