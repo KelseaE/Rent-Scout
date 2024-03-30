@@ -48,4 +48,31 @@ const loginFormHandler = async (event) => {
   document
     .querySelector('.signup-form')
     .addEventListener('submit', signupFormHandler);
+    // Add this code to handle property click event
+const handlePropertyClick = async () => {
+  // Your property click event handling logic here
+};
+
+// Attach event listener to handle property click event
+document.addEventListener('click', async (event) => {
+  if (event.target.classList.contains('property-image')) {
+    const propertyId = event.target.dataset.propertyId;
+    try {
+      const response = await fetch(`/api/properties/${propertyId}`);
+      if (response.ok) {
+        const propertyData = await response.json();
+        // Display property information
+        console.log(propertyData);
+      } else {
+        throw new Error('Failed to fetch property information');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Failed to fetch property information');
+    }
+  }
+});
+
+// Add this line to trigger property click event handler
+handlePropertyClick();
   
