@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: House,
-          attributes: ['filename', 'description'],
+          attributes: ['description'],
         },
       ],
     });
@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
       listing.get({ plain: true })
     );
 
-    res.render('homepage', {
+    res.render('index', {
       listings,
       loggedIn: req.session.loggedIn,
     });

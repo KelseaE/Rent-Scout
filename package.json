@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest",
+    "dev": "concurrently \"npm start\" \"npm test\""
   },
   "author": "",
   "license": "ISC",
@@ -23,5 +24,12 @@
     "pg": "^8.11.3",
     "sequelize": "^6.37.1",
     "session": "^0.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "jest": "^27.4.7"
+  },
+  "jest": {
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$"
   }
 }

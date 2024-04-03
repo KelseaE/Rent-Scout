@@ -9,12 +9,12 @@
 <body>
     <header>
         <!-- Navigation bar or header content -->
-        <h1>Rental Listings</h1>
+        <h1>Rental Listing</h1>
     </header>
 
     <main>
         <div class="listings-container">
-            {{#each listings}}
+            {{#each listing}}
                 <!-- Display individual listing details -->
                 <div class="listing">
                     <h2>{{this.title}}</h2>
@@ -25,11 +25,26 @@
             {{/each}}
         </div>
     </main>
+    <!-- Side Images Section -->
+<div class="side-images">
+    {{#each images}}
+    <img src="{{this}}" alt="Property Image" data-property-id="{{@index}}">
+    {{/each}}
+  </div>
+  
+  <!-- Detailed Information Section -->
+  <div class="detailed-info">
+    <!-- Detailed information will be displayed here -->
+  </div>
+  
 
     <footer>
         <!-- Footer content -->
     </footer>
 
+    <script src="/path/to/imageDisplay.js"></script>
+    <script src="/path/to/login.js"></script>
+    <script src="/path/to/property.js"></script>
     <script src="scripts.js"></script> 
 </body>
 </html>
