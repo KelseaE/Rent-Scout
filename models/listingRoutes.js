@@ -1,8 +1,13 @@
 // routes/listingRoutes.js
 const express = require('express');
 const router = express.Router();
-const {Listing } = require('../models');
+const listingRoutes = require('./routes/listingRoutes');
 const { getPropertyDetails } = require('./zillowService');
+
+
+const app = express()
+app.use('/listings', listingRoutes);
+
 
 // Middleware to check if the user is logged in
 const isAuthenticated = (req, res, next) => {

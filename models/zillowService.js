@@ -1,6 +1,6 @@
 // zillowService.js
 
-const fetch = require('node-fetch'); // Assuming you're using Node.js
+const fetch = require('node-fetch'); 
 
 const ZILLOW_API_URL = 'https://api.zillow.com/research/data';
 

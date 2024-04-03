@@ -9,12 +9,12 @@
 <body>
     <header>
         <!-- Navigation bar or header content -->
-        <h1>Rental Listings</h1>
+        <h1>Rental Listing</h1>
     </header>
 
     <main>
         <div class="listings-container">
-            {{#each listings}}
+            {{#each listing}}
                 <!-- Display individual listing details -->
                 <div class="listing">
                     <h2>{{this.title}}</h2>
