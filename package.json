@@ -1,7 +1,7 @@
 {
   "name": "rent-scout",
   "version": "1.0.0",
-  "description": "",
+  "description": "Colors used for the website:\r -- Seashell (off-white) - #F0F1F3\r -- Pickled Bluewood (blue) - #2E4250\r -- Light Gold (yellow) - #FFDF5C\r -- Eucalyptus (darker green) - #1D9359\r -- Malachite (lighter green) - #00CE68",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -14,7 +14,7 @@
     "bcrypt": "^5.1.1",
     "connect-session-sequelize": "^7.1.7",
     "dotenv": "^16.4.5",
-    "express": "^4.18.3",
+    "express": "^4.19.2",
     "express-handlebars": "^7.1.2",
     "express-session": "^1.18.0",
     "handlebars": "^4.7.8",
@@ -22,6 +22,7 @@
     "multer": "^1.4.5-lts.1",
     "node": "^21.7.0",
     "pg": "^8.11.3",
+    "postgres": "^3.4.4",
     "sequelize": "^6.37.1",
     "session": "^0.1.0"
   },
