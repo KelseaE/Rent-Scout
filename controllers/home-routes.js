@@ -15,9 +15,8 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const listings = dbListingData.map((listing) =>
-      listing.get({ plain: true })
-    );
+    const listings = dbListingData.map((listing) =>listing.get({ plain: true }));
+
 
     res.render('index', {
       listings,
