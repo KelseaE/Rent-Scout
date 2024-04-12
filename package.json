@@ -24,7 +24,8 @@
     "pg": "^8.11.3",
     "postgres": "^3.4.4",
     "sequelize": "^6.37.1",
-    "session": "^0.1.0"
+    "session": "^0.1.0",
+    "webpack": "^5.91.0"
   },
   "devDependencies": {
     "concurrently": "^7.0.0",
