@@ -41,7 +41,7 @@ Rent-Scout is a full-stack web application designed to help users find rental li
 - Contact the property owner if you're interested in a particular property
 
 ## Deployed Application
-The application is deployed on Heroku: [Rent-Scout](https://your-heroku-app.herokuapp.com/)
+The application is deployed on Heroku: [Rent-Scout](https:aqueous-inlet-88621//.herokuapp.com/)
 
 ## Credits
 - This project was developed by [Teremus Pigford ,Kelsea Eure , Anna Hobbs , Melody](https://github.com/)
