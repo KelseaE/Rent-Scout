@@ -23,7 +23,7 @@ Rent-Scout is a full-stack web application designed to help users find rental li
 - Responsive design for optimal viewing on various devices
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/your-username/rent-scout.git`
+1. Clone the repository: `git clone https://github.com/Nutechgy/Rent-Scout.git `
 2. Install dependencies: `npm install`
 3. Set up environment variables:
    - Create a `.env` file in the root directory
@@ -41,7 +41,8 @@ Rent-Scout is a full-stack web application designed to help users find rental li
 - Contact the property owner if you're interested in a particular property
 
 ## Deployed Application
-The application is deployed on Heroku: [Rent-Scout](https:aqueous-inlet-88621//.herokuapp.com/)
+The application is deployed on Heroku: [Rent-Scout]https:rent-scout-94bb07c0c354herokuapp.com/
+
 
 ## Credits
 - This project was developed by [Teremus Pigford ,Kelsea Eure , Anna Hobbs , Melody](https://github.com/)
